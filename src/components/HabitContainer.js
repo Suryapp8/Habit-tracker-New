@@ -102,19 +102,14 @@ function HabitContainer() {
 						</span>
 						<input onChange={(e) => setHabit(e.target.value)} value={habit} type="text" placeholder="Enter the name of habit" />
 					</div>
-					<div className="input-bar">
-						<span className="icon-container">
-							<i className="fa-solid fa-circle-info"></i>
-						</span>
-						<input onChange={(e) => setDescription(e.target.value)} value={description} type="text" placeholder="Write the discription of the habit...." />
-					</div>
+					
 					<button onClick={addYourHabitOnClick}>Add Habit</button>
 				</section>
 				{/* using map funciton to display all the habits added till now */}
 				{data.map((habit, index) => {
 					// here habit is the object which contains the id, title, discription, dates
 					// passing all the information of current habit as props to Habits component
-					return <Habits habitName={habit.title} habitDiscription={habit.description} habitStatus={habit.dates} habitId={habit.id} key={index} />;
+					return <Habits habitName={habit.title}  habitStatus={habit.dates} habitId={habit.id} key={index} />;
 				})}
 			</div>
 		</div>

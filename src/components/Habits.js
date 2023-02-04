@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 // importing the deleteHabit and updateStatus reducers [function] from habitSlice
 import { deleteHabit, updateStatus } from "../features/habitSlice";
 
-function Habits({ habitName, habitDiscription, habitStatus, habitId }) {
+function Habits({ habitName, habitStatus, habitId }) {
 	// We are getting habitName, habitDiscription, habitStatus, habitId as props from parent component i.e HabitContainer
 
 	// using useDispatch hoot for dispatching data form the UI to redux store so that state can be updated accordingly
@@ -28,7 +28,7 @@ function Habits({ habitName, habitDiscription, habitStatus, habitId }) {
 		<div className="list-of-habits">
 			<div className="habit-details">
 				<div className="habit-name">{habitName}</div>
-				<div className="habit-description">{habitDiscription}</div>
+				
 			</div>
 			<div className="seven-days-of-week">
 				<table>
